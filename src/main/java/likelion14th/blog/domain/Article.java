@@ -1,4 +1,4 @@
-package likelion14th.blog;
+package likelion14th.blog.domain;
 
 import jakarta.persistence.*;
 import lombok.*;
