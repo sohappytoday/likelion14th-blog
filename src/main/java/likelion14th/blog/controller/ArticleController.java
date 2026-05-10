@@ -53,6 +53,6 @@ public class ArticleController {
     public ResponseEntity<ApiResponse<Void>>  deleteArticle(@PathVariable Long id) {
         articleService.deleteArticle(id);
 
-        return ResponseEntity.status(HttpStatus.NO_CONTENT).body(ApiResponse.success(204,"게시글을 삭제하는데 성공하였습니다."));
+        return ResponseEntity.ok(ApiResponse.success(204,"게시글을 삭제하는데 성공하였습니다."));
     }
 }

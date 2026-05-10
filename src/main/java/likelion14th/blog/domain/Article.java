@@ -15,7 +15,7 @@ public class Article {
 
     @Id // id 필드를 기본키(Primary Key)로 지정
     @GeneratedValue(strategy = GenerationType.IDENTITY) // 기본키를 자동으로 1씩 증가
-    @Column(updatable = false)
+    @Column(name = "article_id", updatable = false)
     private Long id;
 
     @Column(nullable = false)

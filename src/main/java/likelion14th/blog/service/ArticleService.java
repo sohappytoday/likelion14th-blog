@@ -56,8 +56,7 @@ public class ArticleService {
     public ArticleDetailResponse updateArticle(Long id, String title, String content){
         Article article = articleRepository.findById(id).orElseThrow(() -> new EntityNotFoundException("해당 ID의 게시글을 찾을 수 없습니다."));;
 
-        article.setTitle(title);
-        article.setContent(content);
+        article.update(title, content);
 
         articleRepository.save(article);
         return ArticleDetailResponse.from(article);
