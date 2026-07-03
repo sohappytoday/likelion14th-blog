@@ -141,7 +141,7 @@ pipeline {
 
             sed -i \
               "s|${IMAGE}:.*|${IMAGE}:${SHA}|" \
-              overlays/staging/deployment.yaml
+              base/cardinal-be/deployment.yaml
 
             git config user.email "jenkins@ci"
             git config user.name "jenkins-ci"
