@@ -50,7 +50,7 @@ pipeline {
             rm -rf gitops-tmp
             git clone https://\${GH_USER}:\${GH_TOKEN}@${GITOPS_REPO} gitops-tmp
             cd gitops-tmp
-            sed -i 's|${IMAGE}:.*|${IMAGE}:${SHA}|' overlays/staging/deployment.yaml
+            sed -i 's|${IMAGE}:.*|${IMAGE}:${SHA}|' base/cardinal-be/deployment.yaml
             git config user.email "jenkins@ci"
             git config user.name "jenkins-ci"
             git add -A
