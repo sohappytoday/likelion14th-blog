@@ -146,7 +146,7 @@ pipeline {
             git config user.email "jenkins@ci"
             git config user.name "jenkins-ci"
 
-            git add overlays/staging/deployment.yaml
+            git add base/cardinal-be/deployment.yaml
 
             if git diff --cached --quiet; then
               echo "GitOps 변경 사항이 없습니다."
