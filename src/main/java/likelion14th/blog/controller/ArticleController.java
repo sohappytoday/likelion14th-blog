@@ -28,7 +28,7 @@ public class ArticleController {
         return ResponseEntity.status(HttpStatus.CREATED).body(ApiResponse.success(201, "게시글 생성에 성공하였습니다.", articleDetailResponse));
     }
 
-    @GetMapping()
+    @GetMapping("/hello")
     public ResponseEntity<ApiResponse<List<ArticleSummaryResponse>>> getArticles() {
         List<ArticleSummaryResponse> articleDetailResponses = articleService.getArticles();
 
